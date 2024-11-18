@@ -4,7 +4,7 @@ test.beforeEach(async ({ page }) => {
     await page.goto('https://apps4x.web.app/#/');
   });
 
-  test.describe('Log in', () => {   
+  test.describe('Log in', () => {    
 
     test('User Should be able to log-in', async ({ page }) => {
         await expect(page.getByPlaceholder('UserName')).toBeVisible();
