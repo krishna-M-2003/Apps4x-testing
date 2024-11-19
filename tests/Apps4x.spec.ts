@@ -47,7 +47,7 @@ test.beforeEach(async ({ page }) => {
     });
 
     test(' A popup shows "Invalid userId or PW"', async ({ page })  => {
-        await expect(page.getByPlaceholder('UserName')).toBeVisible();
+        await expect(page.getByPlaceholder('name')).toBeVisible();
         await expect(page.getByPlaceholder('Password')).toBeVisible();
         await page.getByPlaceholder('UserName').click();
         await page.getByPlaceholder('UserName').fill('ram');
