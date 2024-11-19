@@ -47,7 +47,7 @@ test.beforeEach(async ({ page }) => {
     });
 
     test(' A popup shows "Invalid userId or PW"', async ({ page })  => {
-        await expect(page.getByPlaceholder('name')).toBeVisible();
+        await expect(page.getByPlaceholder('UserName')).toBeVisible();
         await expect(page.getByPlaceholder('Password')).toBeVisible();
         await page.getByPlaceholder('UserName').click();
         await page.getByPlaceholder('UserName').fill('ram');
@@ -57,7 +57,7 @@ test.beforeEach(async ({ page }) => {
         await page.getByRole('button', { name: 'SignIn' }).click();
         await expect(page.getByRole('heading', { name: 'InValid userId and password' })).toBeVisible();
         await expect(page.locator('#swal2-title')).toContainText('InValid userId and password');
-        await expect(page.getByRole('button', { name: 'OK' })).toBeVisible();
+        await expect(page.getByRole('button', { name: 'OKey' })).toBeVisible();
         await page.getByRole('button', { name: 'OK' }).click();
     });
   });
